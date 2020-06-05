@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.h
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+
+/home/wojtek/CLionProjects/face-detection/Producer/main.cpp
+iostream
+-
+Connection/Connection.h
+/home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.h
+

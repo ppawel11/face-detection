@@ -5,7 +5,7 @@
 #include "Detector.h"
 
 Detector::Detector() {
-    if( !face_classifier.load( "../Detection/haarcascade_frontalface_alt.xml" ) )
+    if( !face_classifier.load( "./Detection/haarcascade_frontalface_alt.xml" ) )
         throw std::runtime_error("Error loading face cascade");
 }
 
