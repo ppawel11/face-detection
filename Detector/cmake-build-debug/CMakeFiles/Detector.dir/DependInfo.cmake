@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wojtek/CLionProjects/face-detection/Detector/Connection/Connection.cpp" "/home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/Connection/Connection.cpp.o"
-  "/home/wojtek/CLionProjects/face-detection/Detector/Detection/Detector.cpp" "/home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/Detection/Detector.cpp.o"
-  "/home/wojtek/CLionProjects/face-detection/Detector/main.cpp" "/home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/main.cpp.o"
+  "/home/pawel/cpp/sczr2/face-detection/Detector/Connection/Connection.cpp" "/home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/Connection/Connection.cpp.o"
+  "/home/pawel/cpp/sczr2/face-detection/Detector/Detection/Detector.cpp" "/home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/Detection/Detector.cpp.o"
+  "/home/pawel/cpp/sczr2/face-detection/Detector/main.cpp" "/home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

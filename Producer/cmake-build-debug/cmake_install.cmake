@@ -1,4 +1,4 @@
-# Install script for directory: /home/wojtek/CLionProjects/face-detection/Producer
+# Install script for directory: /home/pawel/cpp/sczr2/face-detection/Producer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

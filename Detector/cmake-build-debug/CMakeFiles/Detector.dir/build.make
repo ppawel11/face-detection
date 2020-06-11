@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wojtek/CLionProjects/face-detection/Detector
+CMAKE_SOURCE_DIR = /home/pawel/cpp/sczr2/face-detection/Detector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Detector.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/Detector.dir/flags.make
 
 CMakeFiles/Detector.dir/main.cpp.o: CMakeFiles/Detector.dir/flags.make
 CMakeFiles/Detector.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Detector.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Detector.dir/main.cpp.o -c /home/wojtek/CLionProjects/face-detection/Detector/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Detector.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Detector.dir/main.cpp.o -c /home/pawel/cpp/sczr2/face-detection/Detector/main.cpp
 
 CMakeFiles/Detector.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Detector.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wojtek/CLionProjects/face-detection/Detector/main.cpp > CMakeFiles/Detector.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/cpp/sczr2/face-detection/Detector/main.cpp > CMakeFiles/Detector.dir/main.cpp.i
 
 CMakeFiles/Detector.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Detector.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wojtek/CLionProjects/face-detection/Detector/main.cpp -o CMakeFiles/Detector.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/cpp/sczr2/face-detection/Detector/main.cpp -o CMakeFiles/Detector.dir/main.cpp.s
 
 CMakeFiles/Detector.dir/Connection/Connection.cpp.o: CMakeFiles/Detector.dir/flags.make
 CMakeFiles/Detector.dir/Connection/Connection.cpp.o: ../Connection/Connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Detector.dir/Connection/Connection.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Detector.dir/Connection/Connection.cpp.o -c /home/wojtek/CLionProjects/face-detection/Detector/Connection/Connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Detector.dir/Connection/Connection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Detector.dir/Connection/Connection.cpp.o -c /home/pawel/cpp/sczr2/face-detection/Detector/Connection/Connection.cpp
 
 CMakeFiles/Detector.dir/Connection/Connection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Detector.dir/Connection/Connection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wojtek/CLionProjects/face-detection/Detector/Connection/Connection.cpp > CMakeFiles/Detector.dir/Connection/Connection.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/cpp/sczr2/face-detection/Detector/Connection/Connection.cpp > CMakeFiles/Detector.dir/Connection/Connection.cpp.i
 
 CMakeFiles/Detector.dir/Connection/Connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Detector.dir/Connection/Connection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wojtek/CLionProjects/face-detection/Detector/Connection/Connection.cpp -o CMakeFiles/Detector.dir/Connection/Connection.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/cpp/sczr2/face-detection/Detector/Connection/Connection.cpp -o CMakeFiles/Detector.dir/Connection/Connection.cpp.s
 
 CMakeFiles/Detector.dir/Detection/Detector.cpp.o: CMakeFiles/Detector.dir/flags.make
 CMakeFiles/Detector.dir/Detection/Detector.cpp.o: ../Detection/Detector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Detector.dir/Detection/Detector.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Detector.dir/Detection/Detector.cpp.o -c /home/wojtek/CLionProjects/face-detection/Detector/Detection/Detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Detector.dir/Detection/Detector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Detector.dir/Detection/Detector.cpp.o -c /home/pawel/cpp/sczr2/face-detection/Detector/Detection/Detector.cpp
 
 CMakeFiles/Detector.dir/Detection/Detector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Detector.dir/Detection/Detector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wojtek/CLionProjects/face-detection/Detector/Detection/Detector.cpp > CMakeFiles/Detector.dir/Detection/Detector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/cpp/sczr2/face-detection/Detector/Detection/Detector.cpp > CMakeFiles/Detector.dir/Detection/Detector.cpp.i
 
 CMakeFiles/Detector.dir/Detection/Detector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Detector.dir/Detection/Detector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wojtek/CLionProjects/face-detection/Detector/Detection/Detector.cpp -o CMakeFiles/Detector.dir/Detection/Detector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/cpp/sczr2/face-detection/Detector/Detection/Detector.cpp -o CMakeFiles/Detector.dir/Detection/Detector.cpp.s
 
 # Object files for target Detector
 Detector_OBJECTS = \
@@ -151,7 +151,7 @@ Detector: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
 Detector: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 Detector: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 Detector: CMakeFiles/Detector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Detector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Detector"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Detector.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -164,6 +164,6 @@ CMakeFiles/Detector.dir/clean:
 .PHONY : CMakeFiles/Detector.dir/clean
 
 CMakeFiles/Detector.dir/depend:
-	cd /home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wojtek/CLionProjects/face-detection/Detector /home/wojtek/CLionProjects/face-detection/Detector /home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug /home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug /home/wojtek/CLionProjects/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pawel/cpp/sczr2/face-detection/Detector /home/pawel/cpp/sczr2/face-detection/Detector /home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug /home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug /home/pawel/cpp/sczr2/face-detection/Detector/cmake-build-debug/CMakeFiles/Detector.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Detector.dir/depend
 

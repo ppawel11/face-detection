@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wojtek/CLionProjects/face-detection/Producer
+CMAKE_SOURCE_DIR = /home/pawel/cpp/sczr2/face-detection/Producer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/wojtek/CLionProjects/face-detection/Producer/cmake-buil
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/114/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/114/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ Producer: cmake_check_build_system
 Producer/fast:
 	$(MAKE) -f CMakeFiles/Producer.dir/build.make CMakeFiles/Producer.dir/build
 .PHONY : Producer/fast
+
+Camera/Camera.o: Camera/Camera.cpp.o
+
+.PHONY : Camera/Camera.o
+
+# target to build an object file
+Camera/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/Producer.dir/build.make CMakeFiles/Producer.dir/Camera/Camera.cpp.o
+.PHONY : Camera/Camera.cpp.o
+
+Camera/Camera.i: Camera/Camera.cpp.i
+
+.PHONY : Camera/Camera.i
+
+# target to preprocess a source file
+Camera/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/Producer.dir/build.make CMakeFiles/Producer.dir/Camera/Camera.cpp.i
+.PHONY : Camera/Camera.cpp.i
+
+Camera/Camera.s: Camera/Camera.cpp.s
+
+.PHONY : Camera/Camera.s
+
+# target to generate assembly for a file
+Camera/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/Producer.dir/build.make CMakeFiles/Producer.dir/Camera/Camera.cpp.s
+.PHONY : Camera/Camera.cpp.s
 
 Connection/Connection.o: Connection/Connection.cpp.o
 
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Producer"
+	@echo "... Camera/Camera.o"
+	@echo "... Camera/Camera.i"
+	@echo "... Camera/Camera.s"
 	@echo "... Connection/Connection.o"
 	@echo "... Connection/Connection.i"
 	@echo "... Connection/Connection.s"

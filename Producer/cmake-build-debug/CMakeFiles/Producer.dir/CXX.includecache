@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.h
+/home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.h
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -14,9 +14,45 @@ opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
 -
 
-/home/wojtek/CLionProjects/face-detection/Producer/main.cpp
+/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.h
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+mqueue.h
+-
+sys/types.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+sys/errno.h
+-
+sys/stat.h
+-
+zconf.h
+-
+Message.h
+/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Message.h
+
+/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Message.h
+opencv2/core/core.hpp
+-
+ctime
+-
+vector
+-
+
+/home/pawel/cpp/sczr2/face-detection/Producer/main.cpp
 iostream
 -
 Connection/Connection.h
-/home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.h
+/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.h
+Connection/Message.h
+/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Message.h
+Camera/Camera.h
+/home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.h
 

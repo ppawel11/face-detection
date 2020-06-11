@@ -9,16 +9,34 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
+#include <mqueue.h>
+
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/msg.h>
+#include <sys/errno.h>
+#include <sys/stat.h>
+#include <zconf.h>
+
+#include "Message.h"
+
+extern int errno;
+
+#define MKEY1 1234L
+#define PERMS 0666
+
 class Connection {
     cv::VideoCapture cam;
+    int mq;
 
 public:
     Connection() {};
-    cv::Mat readFromFile(std::string &&path);
 
-    cv::Mat getCameraInput();
-    int initCam();
-    void closeCam();
+    void createMQ();
+    void deleteMQ();
+
+    int sendData(Message & msg);
+
 };
 
 

@@ -6,19 +6,19 @@
 #define DETECTOR_CONNECTION_H
 
 #include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+
+#include <mqueue.h>
+#include "Message.h"
 
 class Connection {
-    cv::VideoCapture cam;
+    int mq;
 
 public:
     Connection() {};
-    cv::Mat readFromFile(std::string &&path);
+    cv::Mat read();
 
-    cv::Mat getCameraInput();
-    int initCam();
-    void closeCam();
+    void openMQ();
+    void closeMQ();
 };
 
 

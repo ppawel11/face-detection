@@ -2,29 +2,32 @@
 // Created by pawel on 01.06.2020.
 //
 
+#include <iostream>
 #include "Connection.h"
 
-cv::Mat Connection::readFromFile(std::string &&path) {
-    cv::Mat image = imread(path, cv::IMREAD_COLOR);
-    if(image.empty())
-        throw std::runtime_error("image not found");
-    cv::imshow("reader", image);
-    return image;
+
+cv::Mat Connection::read(){
+    char buf[9000];
+    Message msg;
+    unsigned int prio = 1;
+    if(mq_receive(mq, (char *)&(msg), 8192,&prio) < 0){
+        perror("receive");
+        throw std::runtime_error("receive problem");
+    }
+
+    std::cout<<msg.mtype<<std::endl;
+    return msg.produceFrame();
 }
 
-cv::Mat Connection::getCameraInput() {
-    cv::Mat frame;
-    cam.read(frame);
-    return frame;
+void Connection::openMQ(){
+    char * name = "/first_q";
+    mq = mq_open(name, O_RDONLY);
+    if(mq < 0){
+        perror("open");
+        throw std::runtime_error("open mq failed");
+    }
 }
 
-int Connection::initCam() {
-    cam.open(0);
-    if(!cam.isOpened())
-        return -1;
-    return 0;
-}
-
-void Connection::closeCam() {
-    cam.release();
+void Connection::closeMQ(){
+    mq_close(mq);
 }

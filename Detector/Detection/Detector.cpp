@@ -5,21 +5,13 @@
 #include "Detector.h"
 
 Detector::Detector() {
-    if( !face_classifier.load( "./Detection/haarcascade_frontalface_alt.xml" ) )
+    if( !face_classifier.load( "../Detection/haarcascade_frontalface_alt.xml" ) )
         throw std::runtime_error("Error loading face cascade");
 }
 
 void Detector::detectAndMarkFaces(cv::Mat frame) {
-    cv::Mat clean = prepareForDetection(frame);
-    std::vector<cv::Rect> faces = detect(clean);
+    std::vector<cv::Rect> faces = detect(frame);
     markDetectedFaces(frame, faces);
-}
-
-cv::Mat Detector::prepareForDetection(const cv::Mat& frame) {
-    cv::Mat frame_gray;
-    cvtColor( frame, frame_gray, cv::COLOR_BGR2GRAY );
-    equalizeHist( frame_gray, frame_gray );
-    return frame_gray;
 }
 
 std::vector<cv::Rect> Detector::detect(cv::Mat frame) {
@@ -30,6 +22,6 @@ std::vector<cv::Rect> Detector::detect(cv::Mat frame) {
 
 void Detector::markDetectedFaces(cv::Mat frame, const std::vector<cv::Rect>& faces) {
     for ( const cv::Rect& face : faces ){
-        rectangle( frame, face, cv::Scalar( 100, 100, 0 ), 4 );
+        rectangle( frame, face, cv::Scalar( 100, 100, 0 ), 2 );
     }
 }

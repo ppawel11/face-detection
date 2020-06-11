@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Producer.dir/Camera/Camera.cpp.o"
   "CMakeFiles/Producer.dir/Connection/Connection.cpp.o"
   "CMakeFiles/Producer.dir/main.cpp.o"
   "Producer"

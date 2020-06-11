@@ -1,4 +1,7 @@
 #include <iostream>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 #include "Connection/Connection.h"
 #include "Detection/Detector.h"
@@ -8,15 +11,25 @@ int main() {
     Detector detector = Detector();
 
     cv::Mat pic;
+    try{
+        connection.openMQ();
+    }catch(std::runtime_error & e){
+        std::cout<<e.what()<<std::endl;
+        return 1;
+    }
 
-    connection.initCam();
     while(true){
-        pic = connection.getCameraInput();
+        try{
+            pic = connection.read();
+        }catch(std::runtime_error & e){
+            std::cout<<e.what()<<std::endl;
+            break;
+        }
         detector.detectAndMarkFaces(pic);
         imshow("detected", pic);
         if( cv::waitKey(10) == 27 ) break; // ESC to quit
     }
-    connection.closeCam();
 
+    connection.closeMQ();
     return 0;
 }

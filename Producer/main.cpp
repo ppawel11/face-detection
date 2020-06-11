@@ -1,38 +1,43 @@
 #include <iostream>
 
 #include "Connection/Connection.h"
+#include "Connection/Message.h"
+#include "Camera/Camera.h"
+
 
 int main(int argc, char** argv) {
 
-    if ( argc < 2 )
-    {
-        printf("Invalid amount of arguments");
-        return -1;
-    }
+//    if ( argc < 2 )
+//    {
+//        printf("Specify connection mode:\n0 - mq\n1 - shm");
+//        return -1;
+//    }
 
     Connection connection = Connection();
-    cv::Mat pic;
+    Camera camera = Camera();
+    cv::Mat frame;
 
-    if(argv[1] == "c"){
-        connection.initCam();
-
-        while(true){
-            pic = connection.getCameraInput();
-            imshow("detected", pic);
-            if( cv::waitKey(10) == 27 ) break; // ESC to quit
-        }
-
-        connection.closeCam();
+    try {
+        camera.init();
+        connection.createMQ();
+    }catch(std::runtime_error & e){
+        std::cout<<e.what()<<std::endl;
+        return 1;
     }
 
-    else {
-
-        while (true) {
-            pic = connection.readFromFile("./picture_examples/lena.png");
-            imshow("detected", pic);
-            if (cv::waitKey(10) == 27) break; // ESC to quit
+    while(true){
+        frame = camera.read();
+        Message msg(frame);
+        try{
+            connection.sendData(msg);
+        }catch(std::runtime_error & e){
+            std::cout<<e.what()<<std::endl;
+            break;
         }
     }
+
+    camera.close();
+    connection.deleteMQ();
 
     return 0;
 }
