@@ -1,0 +1,3 @@
+/home/wojtek/CLionProjects/face-detection/Tests/CMakeFiles/rebuild_cache.dir
+/home/wojtek/CLionProjects/face-detection/Tests/CMakeFiles/edit_cache.dir
+/home/wojtek/CLionProjects/face-detection/Tests/CMakeFiles/Tests.dir

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.cpp" "/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/Camera/Camera.cpp.o"
-  "/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.cpp" "/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/Connection/Connection.cpp.o"
-  "/home/pawel/cpp/sczr2/face-detection/Producer/main.cpp" "/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/main.cpp.o"
+  "/home/wojtek/CLionProjects/face-detection/Producer/Camera/Camera.cpp" "/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/Camera/Camera.cpp.o"
+  "/home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.cpp" "/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/Connection/Connection.cpp.o"
+  "/home/wojtek/CLionProjects/face-detection/Producer/main.cpp" "/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

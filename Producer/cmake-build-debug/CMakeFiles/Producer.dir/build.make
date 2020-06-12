@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/wojtek/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pawel/cpp/sczr2/face-detection/Producer
+CMAKE_SOURCE_DIR = /home/wojtek/CLionProjects/face-detection/Producer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Producer.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/Producer.dir/flags.make
 
 CMakeFiles/Producer.dir/main.cpp.o: CMakeFiles/Producer.dir/flags.make
 CMakeFiles/Producer.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Producer.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Producer.dir/main.cpp.o -c /home/pawel/cpp/sczr2/face-detection/Producer/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Producer.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Producer.dir/main.cpp.o -c /home/wojtek/CLionProjects/face-detection/Producer/main.cpp
 
 CMakeFiles/Producer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Producer.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/cpp/sczr2/face-detection/Producer/main.cpp > CMakeFiles/Producer.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wojtek/CLionProjects/face-detection/Producer/main.cpp > CMakeFiles/Producer.dir/main.cpp.i
 
 CMakeFiles/Producer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Producer.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/cpp/sczr2/face-detection/Producer/main.cpp -o CMakeFiles/Producer.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wojtek/CLionProjects/face-detection/Producer/main.cpp -o CMakeFiles/Producer.dir/main.cpp.s
 
 CMakeFiles/Producer.dir/Connection/Connection.cpp.o: CMakeFiles/Producer.dir/flags.make
 CMakeFiles/Producer.dir/Connection/Connection.cpp.o: ../Connection/Connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Producer.dir/Connection/Connection.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Producer.dir/Connection/Connection.cpp.o -c /home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Producer.dir/Connection/Connection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Producer.dir/Connection/Connection.cpp.o -c /home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.cpp
 
 CMakeFiles/Producer.dir/Connection/Connection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Producer.dir/Connection/Connection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.cpp > CMakeFiles/Producer.dir/Connection/Connection.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.cpp > CMakeFiles/Producer.dir/Connection/Connection.cpp.i
 
 CMakeFiles/Producer.dir/Connection/Connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Producer.dir/Connection/Connection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.cpp -o CMakeFiles/Producer.dir/Connection/Connection.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.cpp -o CMakeFiles/Producer.dir/Connection/Connection.cpp.s
 
 CMakeFiles/Producer.dir/Camera/Camera.cpp.o: CMakeFiles/Producer.dir/flags.make
 CMakeFiles/Producer.dir/Camera/Camera.cpp.o: ../Camera/Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Producer.dir/Camera/Camera.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Producer.dir/Camera/Camera.cpp.o -c /home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Producer.dir/Camera/Camera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Producer.dir/Camera/Camera.cpp.o -c /home/wojtek/CLionProjects/face-detection/Producer/Camera/Camera.cpp
 
 CMakeFiles/Producer.dir/Camera/Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Producer.dir/Camera/Camera.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.cpp > CMakeFiles/Producer.dir/Camera/Camera.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wojtek/CLionProjects/face-detection/Producer/Camera/Camera.cpp > CMakeFiles/Producer.dir/Camera/Camera.cpp.i
 
 CMakeFiles/Producer.dir/Camera/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Producer.dir/Camera/Camera.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.cpp -o CMakeFiles/Producer.dir/Camera/Camera.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wojtek/CLionProjects/face-detection/Producer/Camera/Camera.cpp -o CMakeFiles/Producer.dir/Camera/Camera.cpp.s
 
 # Object files for target Producer
 Producer_OBJECTS = \
@@ -151,7 +151,7 @@ Producer: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
 Producer: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 Producer: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 Producer: CMakeFiles/Producer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Producer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Producer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Producer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -164,6 +164,6 @@ CMakeFiles/Producer.dir/clean:
 .PHONY : CMakeFiles/Producer.dir/clean
 
 CMakeFiles/Producer.dir/depend:
-	cd /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pawel/cpp/sczr2/face-detection/Producer /home/pawel/cpp/sczr2/face-detection/Producer /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug /home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wojtek/CLionProjects/face-detection/Producer /home/wojtek/CLionProjects/face-detection/Producer /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug /home/wojtek/CLionProjects/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Producer.dir/depend
 

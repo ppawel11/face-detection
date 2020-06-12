@@ -9,10 +9,13 @@
 
 #include <ctime>
 #include <vector>
+#include <chrono>
+
+using namespace std::chrono;
 
 struct Message{
     long mtype;
-    int timestamp;
+    milliseconds timestamp;
     int height;
     int width;;
     uchar pixels[90*90];
@@ -22,7 +25,9 @@ struct Message{
         cv::resize(frame, resized, cv::Size(90, 90), 0, 0, CV_INTER_CUBIC);
 
         mtype = 0;
-        timestamp = time(nullptr);
+        timestamp = duration_cast< milliseconds >(
+                system_clock::now().time_since_epoch()
+        );
         height = resized.rows;
         width = resized.cols;
         for (int i = 0; i < resized.rows; ++i)

@@ -5,13 +5,15 @@
 #ifndef DETECTOR_MESSAGE_H
 #define DETECTOR_MESSAGE_H
 
-#include <ctime>
+#include <chrono>
 #include <vector>
 #include <opencv2/core/core.hpp>
 
+using namespace std::chrono;
+
 struct Message{
     long mtype;
-    int timestamp;
+    milliseconds timestamp;
     int height;
     int width;
     char pixels[90*90] = {0};
