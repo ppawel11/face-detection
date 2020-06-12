@@ -26,7 +26,9 @@ int main() {
             std::cout<<e.what()<<std::endl;
             break;
         }
-        detector.detectAndMarkFaces(pic);
+	for(int i =0; i < 10; i++){
+            detector.detectAndMarkFaces(pic);
+	}
         Message msg(pic);
         connection.sendData(msg);
 //        imshow("detected", pic);
