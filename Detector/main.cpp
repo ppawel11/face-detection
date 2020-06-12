@@ -16,10 +16,6 @@ int main() {
 
     std::ofstream logFile;
 
-    sched_param params;
-    params.sched_priority = 1;
-    sched_setscheduler(0,SCHED_FIFO,&params );
-
     cv::Mat pic;
     try{
         connection.openMQ();
@@ -32,7 +28,7 @@ int main() {
     nanoseconds endTimestamp;
 
     while(true){
-        logFile.open("SCHED_FIFO_1.txt",std::ios::app);
+        logFile.open("log3.txt",std::ios::app);
 
         try{
             Message msg = connection.read();

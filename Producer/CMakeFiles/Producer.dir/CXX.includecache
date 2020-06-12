@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/wojtek/CLionProjects/face-detection/Producer/Camera/Camera.cpp
+Camera.h
+/home/wojtek/CLionProjects/face-detection/Producer/Camera/Camera.h
+
 /home/wojtek/CLionProjects/face-detection/Producer/Camera/Camera.h
 opencv2/core/core.hpp
 -
@@ -13,6 +17,14 @@ opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp
 -
+
+/home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.cpp
+iostream
+-
+fcntl.h
+-
+Connection.h
+/home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.h
 
 /home/wojtek/CLionProjects/face-detection/Producer/Connection/Connection.h
 opencv2/core/core.hpp
