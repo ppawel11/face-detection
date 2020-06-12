@@ -1,0 +1,14 @@
+//
+// Created by pawel on 12.06.2020.
+//
+
+#ifndef FACEDETECTION_SHAREDMEMORYCONNECTION_H
+#define FACEDETECTION_SHAREDMEMORYCONNECTION_H
+
+
+class SharedMemoryConnection {
+
+};
+
+
+#endif //FACEDETECTION_SHAREDMEMORYCONNECTION_H

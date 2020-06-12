@@ -1,40 +1,43 @@
 #include <iostream>
 #include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
 
-#include "Connection/Connection.h"
+#include "../Communication/Message.h"
+#include "../Communication/MessageQueueConnection.h"
 #include "Detection/Detector.h"
 
 int main() {
-    Connection connection = Connection();
+    Connection * connection = new MessageQueueConnection();
     Detector detector = Detector();
+
+    std::string recv_mq = "/producer-detector-mq";
+    std::string sending_mq = "/detector-archiver-mq";
 
     cv::Mat pic;
     try{
-        connection.openReceivingMQ();
-        connection.createSendingMQ();
+        connection->open(recv_mq, O_RDONLY);
+        connection->create(sending_mq);
     }catch(std::runtime_error & e){
         std::cout<<e.what()<<std::endl;
         return 1;
     }
 
     while(true){
+
         try{
-            pic = connection.read();
+            pic = connection->read();
         }catch(std::runtime_error & e){
             std::cout<<e.what()<<std::endl;
             break;
         }
         detector.detectAndMarkFaces(pic);
         Message msg(pic);
-        connection.sendData(msg);
+        connection->send(msg);
 //        imshow("detected", pic);
         //if( cv::waitKey(10) == 27 ) break; // ESC to quit
     }
 
-    connection.closeReceivingMQ();
-    connection.deleteSendingMQ();
+    connection->close();
+    connection->remove(sending_mq);
 
     return 0;
 }
