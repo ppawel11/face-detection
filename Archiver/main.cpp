@@ -4,28 +4,31 @@
 #include <string>
 
 int main() {
+
     Connection connection = Connection();
-    int i = 0;
-    cv::Mat pic;
-    std::string filename;
-    connection.initCam();
-    while(true){
-        filename = "../images/picture";
-        pic = connection.getCameraInput();
+    cv::Mat frame;
 
-
-        if(i == 100){
-            i=0;
-        }
-        filename += std::to_string(i);
-        filename += ".jpg"
-        imwrite( filename, pic );
-
-        if( cv::waitKey(10) == 27 ) break; // ESC to quit
-
-
+    try{
+        connection.openReceivingMQ();
+    }catch(std::runtime_error & e){
+        std::cout<<e.what();
+        return 1;
     }
-    connection.closeCam();
 
+    while(true){
+        try{
+            frame = connection.receiveData();
+        }catch(std::runtime_error & e){
+            std::cout<<e.what();
+            break;
+        }
+        std::cout<<frame.cols<<std::endl;
+        cv::imshow("archived", frame);
+        if( cv::waitKey(10) == 27 ) break;
+        cv::imwrite("../photos/myphoto.png", frame);
+//        cv::waitKey(0);
+    }
+
+    connection.closeReceivingMQ();
     return 0;
 }

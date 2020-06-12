@@ -27,6 +27,8 @@ vector
 -
 opencv2/core/core.hpp
 -
+opencv2/imgproc.hpp
+-
 
 /home/pawel/cpp/sczr2/face-detection/Detector/Detection/Detector.h
 opencv2/objdetect.hpp

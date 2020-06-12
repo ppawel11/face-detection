@@ -10,15 +10,22 @@
 #include <mqueue.h>
 #include "Message.h"
 
+#define PERMS 0666
+
 class Connection {
-    int mq;
+    int mq_recv;
+    int mq_sending;
 
 public:
     Connection() {};
     cv::Mat read();
 
-    void openMQ();
-    void closeMQ();
+    void openReceivingMQ();
+    void closeReceivingMQ();
+
+    void createSendingMQ();
+    void deleteSendingMQ();
+    void sendData(Message & msg);
 };
 
 

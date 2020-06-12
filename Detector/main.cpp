@@ -12,7 +12,8 @@ int main() {
 
     cv::Mat pic;
     try{
-        connection.openMQ();
+        connection.openReceivingMQ();
+        connection.createSendingMQ();
     }catch(std::runtime_error & e){
         std::cout<<e.what()<<std::endl;
         return 1;
@@ -26,10 +27,14 @@ int main() {
             break;
         }
         detector.detectAndMarkFaces(pic);
-        imshow("detected", pic);
-        if( cv::waitKey(10) == 27 ) break; // ESC to quit
+        Message msg(pic);
+        connection.sendData(msg);
+//        imshow("detected", pic);
+        //if( cv::waitKey(10) == 27 ) break; // ESC to quit
     }
 
-    connection.closeMQ();
+    connection.closeReceivingMQ();
+    connection.deleteSendingMQ();
+
     return 0;
 }

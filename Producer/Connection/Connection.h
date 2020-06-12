@@ -22,7 +22,6 @@
 
 extern int errno;
 
-#define MKEY1 1234L
 #define PERMS 0666
 
 class Connection {

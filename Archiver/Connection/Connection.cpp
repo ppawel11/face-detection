@@ -5,20 +5,24 @@
 #include "Connection.h"
 
 
-
-cv::Mat Connection::getCameraInput() {
-    cv::Mat frame;
-    cam.read(frame);
-    return frame;
+void Connection::openReceivingMQ(){
+    mq_receiving = mq_open((char*)"/detector-archiver-mq", O_RDONLY);
+    if(mq_receiving < 0){
+        perror("open");
+        throw std::runtime_error("open mq_receiving failed");
+    }
 }
 
-int Connection::initCam() {
-    cam.open(0);
-    if(!cam.isOpened())
-        return -1;
-    return 0;
+void Connection::closeReceivingMQ(){
+    mq_close(mq_receiving);
 }
 
-void Connection::closeCam() {
-    cam.release();
+cv::Mat Connection::receiveData() {
+    Message msg;
+    unsigned int prio = 1;
+    if(mq_receive(mq_receiving, (char *)&(msg), 8192, &prio) < 0){
+        perror("receive");
+        throw std::runtime_error("receive problem");
+    }
+    return msg.produceFrame();
 }

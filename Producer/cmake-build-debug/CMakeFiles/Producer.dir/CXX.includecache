@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.h
-opencv2/core/core.hpp
+/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.cpp
+iostream
 -
-opencv2/highgui/highgui.hpp
+fcntl.h
 -
-opencv2/imgproc/imgproc.hpp
--
+Connection.h
+/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.h
 
 /home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.h
 opencv2/core/core.hpp
@@ -45,14 +45,4 @@ ctime
 -
 vector
 -
-
-/home/pawel/cpp/sczr2/face-detection/Producer/main.cpp
-iostream
--
-Connection/Connection.h
-/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Connection.h
-Connection/Message.h
-/home/pawel/cpp/sczr2/face-detection/Producer/Connection/Message.h
-Camera/Camera.h
-/home/pawel/cpp/sczr2/face-detection/Producer/Camera/Camera.h
 

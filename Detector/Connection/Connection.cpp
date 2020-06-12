@@ -7,27 +7,49 @@
 
 
 cv::Mat Connection::read(){
-    char buf[9000];
     Message msg;
     unsigned int prio = 1;
-    if(mq_receive(mq, (char *)&(msg), 8192,&prio) < 0){
+    if(mq_receive(mq_recv, (char *)&(msg), 8192, &prio) < 0){
         perror("receive");
         throw std::runtime_error("receive problem");
     }
-
-    std::cout<<msg.mtype<<std::endl;
     return msg.produceFrame();
 }
 
-void Connection::openMQ(){
-    char * name = "/first_q";
-    mq = mq_open(name, O_RDONLY);
-    if(mq < 0){
+void Connection::openReceivingMQ(){
+    mq_recv = mq_open((char*)"/producer-detector-mq", O_RDONLY);
+    if(mq_recv < 0){
         perror("open");
-        throw std::runtime_error("open mq failed");
+        throw std::runtime_error("open mq_recv failed");
     }
 }
 
-void Connection::closeMQ(){
-    mq_close(mq);
+void Connection::closeReceivingMQ(){
+    mq_close(mq_recv);
+}
+
+void Connection::createSendingMQ() {
+    char * queue_name = {(char*)"/detector-archiver-mq"};
+    struct mq_attr attr;
+    attr.mq_msgsize = 8192L;
+////    attr.mq_flags = 0L;
+////    attr.mq_curmsgs = 0L;
+    attr.mq_maxmsg = 10L;
+    mq_sending = mq_open(queue_name, O_WRONLY | O_CREAT, PERMS, &attr);
+    if(mq_sending < 0){
+        perror("create");
+        throw std::runtime_error("detector-archiver queue not created");
+    }
+}
+
+void Connection::deleteSendingMQ() {
+    const char * name = {"/detector-archiver-mq"};
+    mq_unlink("/detector-archiver-mq");
+}
+
+void Connection::sendData(Message & msg) {
+    if(mq_send(mq_sending, (const char *)&(msg), sizeof(msg), 1) < 0){
+        perror("sending");
+        throw std::runtime_error("sending problem");
+    }
 }

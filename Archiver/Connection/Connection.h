@@ -9,16 +9,19 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
+#include <mqueue.h>
+#include "Message.h"
+
 class Connection {
-    cv::VideoCapture cam;
+    int mq_receiving;
 
 public:
     Connection() {};
 
+    void openReceivingMQ();
+    void closeReceivingMQ();
 
-    cv::Mat getCameraInput();
-    int initCam();
-    void closeCam();
+    cv::Mat receiveData();
 };
 
 
