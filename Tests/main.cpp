@@ -11,7 +11,7 @@ int main () {
 
     ifstream logFile;
 
-    logFile.open("./tests/SCHED_FIFO_1.txt");
+    logFile.open("./tests/log3.txt");
 
     if (logFile.is_open())
     {
@@ -34,7 +34,10 @@ int main () {
             }
         }
         cout << lineNumber << " " << arithmeticMean;
-        resultFile << "Schedule method: " << "SCHED_RR " << "priority: " << "99" << "\n";
+        resultFile << "Schedule method: SCHED_DEADLINE " << "\n" << "Params: "<< "\n";
+        resultFile << "runtime: " << "5000"<< "\n";
+        resultFile << "deadline: " << "10000"<< "\n";
+        resultFile << "period: " << "15000"<< "\n";
         resultFile << "Average delay time " << arithmeticMean << "\n\n";
         logFile.close();
     }
