@@ -14,11 +14,6 @@ int main(int argc, char** argv) {
     Connection connection = Connection();
     Camera camera = Camera();
     cv::Mat frame;
-    std::ofstream logFile;
-
-    sched_param params;
-    params.sched_priority = 1;
-    sched_setscheduler(0,SCHED_DEADLINE,&params );
 
     try {
         camera.init();
@@ -31,7 +26,6 @@ int main(int argc, char** argv) {
     }
 
     while(true){
-        logFile.open("SCHED_DEADLINE_1.txt",std::ios::app);
 
         frame = camera.read();
         Message msg(frame);
@@ -43,8 +37,6 @@ int main(int argc, char** argv) {
             break;
         }
 
-        logFile  << msg.timestamp.count() << std::endl;
-        logFile.close();
     }
 
     camera.close();

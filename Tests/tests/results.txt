@@ -1,18 +1,26 @@
-Schedule method: SCHED_RR priority: 1
-Average delay time 73
-
-Schedule method: SCHED_RR priority: 99
-Average delay time 75
+Schedule method: SCHED_DEADLINE priority: 1
+Average delay time 168948
 
 Schedule method: SCHED_DEADLINE priority: 99
-Average delay time 86
+Average delay time 195778
 
-Schedule method: SCHED_DEADLINE priority: 1
-Average delay time 86
+Schedule method: SCHED_RR priority: 1
+Average delay time 265649
+
+Schedule method: SCHED_RR priority: 99
+Average delay time 250604
 
 Schedule method: SCHED_FIFO priority: 1
-Average delay time 83
+Average delay time 142533
 
 Schedule method: SCHED_FIFO priority: 99
-Average delay time 82
+Average delay time 152867
+
+
+
+
+
+
+
+
 

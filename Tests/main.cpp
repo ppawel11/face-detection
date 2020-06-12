@@ -11,38 +11,31 @@ int main () {
 
     ifstream logFile;
 
-    logFile.open("./tests/SCHED_FIFO_99.txt");
+    logFile.open("./tests/SCHED_FIFO_1.txt");
 
     if (logFile.is_open())
     {
         string line;
         long long lineNumber = 0;
-
-        bool isFirstLine = true;
-        long long prevLine;
-        long long nextLine;
+        long long number;
         long long sum;
-
+        long long arithmeticMean;
         while ( getline (logFile,line) )
         {
-
-            if(isFirstLine){
-                nextLine = stoll(line);
-                isFirstLine = false;
+            if(lineNumber == 0){
+                lineNumber++;
+                arithmeticMean = stoll(line);
             }
             else{
-                prevLine = nextLine;
-                nextLine = stoll(line);
-
-                sum += nextLine - prevLine;
-                cout << nextLine - prevLine << "\n";
+                lineNumber++;
+                number = stoll(line);
+                arithmeticMean = arithmeticMean / lineNumber;
+                arithmeticMean = (arithmeticMean * (lineNumber - 1) + number / lineNumber);
             }
-
-            lineNumber++;
         }
-        cout << lineNumber << " " << sum;
-        resultFile << "Schedule method: " << "SCHED_FIFO " << "priority: " << "99" << "\n";
-        resultFile << "Average delay time " << sum/lineNumber << "\n\n";
+        cout << lineNumber << " " << arithmeticMean;
+        resultFile << "Schedule method: " << "SCHED_RR " << "priority: " << "99" << "\n";
+        resultFile << "Average delay time " << arithmeticMean << "\n\n";
         logFile.close();
     }
 

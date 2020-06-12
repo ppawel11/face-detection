@@ -6,7 +6,7 @@
 #include "Connection.h"
 
 
-cv::Mat Connection::read(){
+Message Connection::read(){
     char buf[9000];
     Message msg;
     unsigned int prio = 1;
@@ -16,7 +16,7 @@ cv::Mat Connection::read(){
     }
 
     std::cout<<msg.mtype<<std::endl;
-    return msg.produceFrame();
+    return msg;
 }
 
 void Connection::openMQ(){

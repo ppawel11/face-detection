@@ -13,7 +13,7 @@ using namespace std::chrono;
 
 struct Message{
     long mtype;
-    milliseconds timestamp;
+    nanoseconds timestamp;
     int height;
     int width;
     char pixels[90*90] = {0};

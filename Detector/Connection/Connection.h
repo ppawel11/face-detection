@@ -15,7 +15,7 @@ class Connection {
 
 public:
     Connection() {};
-    cv::Mat read();
+    Message read();
 
     void openMQ();
     void closeMQ();

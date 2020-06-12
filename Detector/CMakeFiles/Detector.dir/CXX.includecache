@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/wojtek/CLionProjects/face-detection/Detector/Connection/Connection.cpp
-iostream
--
-Connection.h
-/home/wojtek/CLionProjects/face-detection/Detector/Connection/Connection.h
-
 /home/wojtek/CLionProjects/face-detection/Detector/Connection/Connection.h
 opencv2/core/core.hpp
 -
@@ -28,10 +22,6 @@ vector
 opencv2/core/core.hpp
 -
 
-/home/wojtek/CLionProjects/face-detection/Detector/Detection/Detector.cpp
-Detector.h
-/home/wojtek/CLionProjects/face-detection/Detector/Detection/Detector.h
-
 /home/wojtek/CLionProjects/face-detection/Detector/Detection/Detector.h
 opencv2/objdetect.hpp
 /home/wojtek/CLionProjects/face-detection/Detector/Detection/opencv2/objdetect.hpp
@@ -40,6 +30,10 @@ opencv2/imgproc.hpp
 
 /home/wojtek/CLionProjects/face-detection/Detector/main.cpp
 iostream
+-
+fstream
+-
+chrono
 -
 opencv2/core/core.hpp
 -

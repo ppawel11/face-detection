@@ -15,7 +15,7 @@ using namespace std::chrono;
 
 struct Message{
     long mtype;
-    milliseconds timestamp;
+    nanoseconds timestamp;
     int height;
     int width;;
     uchar pixels[90*90];
@@ -25,7 +25,7 @@ struct Message{
         cv::resize(frame, resized, cv::Size(90, 90), 0, 0, CV_INTER_CUBIC);
 
         mtype = 0;
-        timestamp = duration_cast< milliseconds >(
+        timestamp = duration_cast< nanoseconds >(
                 system_clock::now().time_since_epoch()
         );
         height = resized.rows;
