@@ -1,3 +1,0 @@
-/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/pawel/cpp/sczr2/face-detection/Producer/cmake-build-debug/CMakeFiles/Producer.dir
